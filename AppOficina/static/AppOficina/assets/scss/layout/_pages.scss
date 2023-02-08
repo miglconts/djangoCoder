@@ -1,0 +1,69 @@
+@import '../utilities/mixins';
+@import '../utilities/colors';
+@import '../components/fonts';
+
+/* pages */
+.container{
+    @include flexColumCenter();
+}
+.tarjeta{
+    background-color: $cards;
+    @include flexColumCenter();
+    align-items: stretch;
+    margin: 1rem 1rem;
+    padding: 2rem 2rem;
+    /* background-color: #004A89; */
+        a{
+            text-align: center;
+            font-size: 800;
+            align-self: center;
+        }
+}
+.infoProject{
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    font-variation-settings: map-get($font-weights, "light" );
+    color: $primary;
+    margin-bottom: 1rem;
+}
+.imgProject {
+    margin: .5rem 0;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.address{
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+@media (min-width : 576px) {
+    .container{
+        @include flexRowCenter();
+        justify-content: center;
+        align-items: stretch;
+    }
+    .tarjeta{
+        width: 40%;
+    }
+    .imgProject {
+        height: 400px;
+    }
+}
+
+@media (min-width : 992px) {
+    .container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+    
+    .tarjeta{
+        width: 40%;
+    }
+    .imgProject {
+        height: 550px;
+    }
+}

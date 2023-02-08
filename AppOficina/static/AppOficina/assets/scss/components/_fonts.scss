@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Inconsolata';
+    src: url(../fonts/Inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf) format("truetype-variations");
+
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf) format("truetype-variations");
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf) format("truetype-variations");
+    font-style: italic;
+}
+
+$font-weights: (
+    "thin": 'wght' 100,
+    "hair":  'wght'200,
+    "light": 'wght' 300,
+    "regular":'wght' 400, 
+    "medium": 'wght'500, 
+    "demiBold": 'wght'600, 
+    "bold": 'wght'700,
+    "black": 'wght' 900,
+    );
+
+$font-widths: (
+    "narrow": 'wdth' 120,
+    "regular": 'wdth' 400, 
+    "wide": 'wdth' 500
+    );

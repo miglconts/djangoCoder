@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'AppOficina/assets/css/style.css' %}"
+    />
+    <title>killetter</title>
+    <meta
+      name="description"
+      content="Bienvenido a killetter. Estudio méxicano especializado en caligrafía, tipografía y lettering."
+    />
+    <meta name="keywords" content="DISEÑO, TIPOGRAFÍA, CALIGRAFÍA, LETTERING" />
+    <!-- OPEN GRAPH -->
+    <meta property="og:tipe" content="website" />
+    <meta property="og:title" content="killetter" />
+    <meta
+      property="og:description"
+      content="Estudio méxicano especializado en caligrafía, tipografía y lettering."
+    />
+    <meta property="og:image" content="assets/img/imagen-1.png" />
+    <meta property="og:name" content="Killetter Studio" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'AppOficina/assets/img/favicons/favicon-16x16.png' %}"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header class="barHeader">
+      <div class="logo">
+        <a class="logoText" href="{% url 'home'%}">killetter</a>
+      </div>
+      <nav class="navBar">
+        <ul>
+          <li><a href="{% url 'videojuego'%}"> Videojuegos</a></li>
+          <li><a href="{% url 'consola'%}"> Consolas</a></li>
+          <li><a href="{% url 'desarrollador'%}"> Desarrolladores</a></li>
+          <li><a href="{% url 'personaje'%}"> Personajes</a></li>
+          <li><a href="{% url 'buscarVideojuego'%}"> Buscar Videojuegos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">{% block main %} {% endblock %}</main>
+
+    <!-- Footer -->
+    <footer class="barFooter">
+      <div class="logo">
+        <a class="logoTextFoot" href="index.html">killetter</a>
+        <p>Letras desde 2017</p>
+      </div>
+      <nav class="navBarFooter">
+        <a href="https://www.instagram.com/killetter"
+          ><img
+            class="jello-vertical"
+            src="{% static 'AppOficina/assets/icons/instagram-brands.svg' %}"
+            alt="Logo de
+          instagram"
+        /></a>
+        <a href="https://twitter.com/killettertype"
+          ><img
+            class="jello-vertical"
+            src="{% static 'AppOficina/assets/icons/twitter-brands.svg' %}"
+            alt="Logo de twitter"
+        /></a>
+        <a href="https://www.behance.net/killetter"
+          ><img
+            class="jello-vertical"
+            src="{% static 'AppOficina/assets/icons/behance-brands.svg' %}"
+            alt="Logo de behance"
+        /></a>
+        <a href="https://github.com/miglconts"
+          ><img
+            class="jello-vertical"
+            src="{% static 'AppOficina/assets/icons/github-brands.svg' %}"
+            alt="Logo de github"
+        /></a>
+      </nav>
+    </footer>
+  </body>
+</html>
