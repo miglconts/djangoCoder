@@ -1,26 +1,9 @@
-@font-face {
-  font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata/Inconsolata-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-  font-style: italic;
-}
 button {
   display: inline-block;
   margin: 1rem 0;
   background-color: rgba(254, 255, 254, 0);
   color: #004a89;
   font-size: 1rem;
-  font-variation-settings: "wght" 400;
   align-items: center;
   padding: 0.3rem 2rem;
   border-radius: 30px;
@@ -39,38 +22,6 @@ button:hover {
   color: #fefffe;
 }
 
-@font-face {
-  font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata/Inconsolata-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-  font-style: italic;
-}
-@font-face {
-  font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata/Inconsolata-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-  font-style: italic;
-}
 /* form */
 .mainForm {
   display: flex;
@@ -125,7 +76,6 @@ form label {
   background-color: rgba(254, 255, 254, 0);
   color: #004a89;
   font-size: 1rem;
-  font-variation-settings: "wght" 400;
   padding: 0.3rem 2rem;
   border-radius: 30px;
   border: none;
@@ -147,22 +97,7 @@ form label {
     font-size: 1.6rem;
   }
 }
-@font-face {
-  font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata/Inconsolata-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-  font-style: italic;
-}
+
 .jello-vertical:hover {
   animation: jello-vertical 2s both;
 }
@@ -190,35 +125,10 @@ form label {
     transform: scale3d(1, 1, 1);
   }
 }
-@keyframes variation {
-  0% {
-    font-variation-settings: "wght" 100, "wdth" 120;
-  }
-  50% {
-    font-variation-settings: "wght" 900, "wdth" 120;
-  }
-  100% {
-    font-variation-settings: "wght" 100, "wdth" 120;
-  }
-}
-@font-face {
-  font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata/Inconsolata-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-  font-style: italic;
-}
+
 * {
-  font-family: "Open Sans";
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -231,13 +141,11 @@ main {
 
 h1,
 h2 {
-  font-variation-settings: "wght" 700;
   font-size: 2.5rem;
   color: #004a89;
 }
 
 h3 {
-  font-variation-settings: "wght" 600;
   font-size: 2rem;
   color: #004a89;
 }
@@ -246,13 +154,11 @@ h4 {
   margin: 0.5rem 0;
   font-size: 2rem;
   color: #004a89;
-  font-variation-settings: "wght" 400;
 }
 
 p {
   font-size: 1rem;
   color: #004a89;
-  font-variation-settings: "wght" 200;
 }
 
 .titulo {
@@ -294,38 +200,17 @@ p {
 }
 .logoText,
 .logoTextFoot {
-  font-family: "Inconsolata";
-  font-variation-settings: "wght" 100, "wdth" 120;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-decoration: none;
   color: #004a89;
   font-size: 2.5rem;
 }
-.logoText:hover,
-.logoTextFoot:hover {
-  animation: variation 2s ease;
-  /* font-variation-settings: 'wght' 500, 'wdth' 120; */
-}
 
-@font-face {
-  font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata/Inconsolata-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-  font-style: italic;
-}
 .logoText,
 .logoTextFoot {
-  font-family: "Inconsolata";
-  font-variation-settings: "wght" 100, "wdth" 120;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-decoration: none;
   color: #004a89;
   font-size: 2.5rem;
@@ -341,13 +226,13 @@ p {
 
 .barHeader {
   overflow: hidden;
-  background-color: rgba(251, 251, 251, 0.6);
+  background-color: rgba(251, 251, 251, 0.9);
   position: fixed;
   top: 0;
   width: 100%;
   height: 100px;
   padding: 10px 10px;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -392,8 +277,8 @@ p {
   margin: 0px 1px;
 }
 .navBar a {
-  font-family: "Inconsolata";
-  font-variation-settings: "wght" 300, "wdth" 120;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-decoration: none;
   font-size: 16px;
   text-align: center;
@@ -403,7 +288,6 @@ p {
   border-bottom: rgba(0, 73, 137, 0) 1px solid;
 }
 .navBar a:hover {
-  font-variation-settings: "wght" 500, "wdth" 120;
   border-bottom: 1px solid #004a89;
 }
 
@@ -525,22 +409,6 @@ p {
     grid-template-areas: "none  seccion seccion seccion seccion imageSecc imageSecc imageSecc imageSecc imageSecc imageSecc imageSecc";
   }
 }
-@font-face {
-  font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata/Inconsolata-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\wght.ttf)
-    format("truetype-variations");
-  font-style: italic;
-}
 /* pages */
 .container {
   display: flex;
@@ -573,9 +441,9 @@ p {
 }
 
 .infoProject {
-  font-family: "Open Sans";
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1rem;
-  font-variation-settings: "wght" 300;
   color: #004a89;
   margin-bottom: 1rem;
 }
@@ -626,4 +494,14 @@ p {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+.userNav {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  color: #004a89;
+  display: inline-block;
+  padding: 5px 10px;
+  border-bottom: rgba(0, 73, 137, 0) 1px solid;
+}

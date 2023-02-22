@@ -1,0 +1,62 @@
+{% extends "AppOficina/plantilla.html" %} {% load static %} {% block main %}
+
+<div style="width: 60%">
+  <h3>Videojuegos</h3>
+  <ul>
+    {% for resultado in videojuegos %}
+
+    <li>
+      <h4>{{ resultado.nombre}}</h4>
+      <strong> Plataforma:</strong> {{resultado.plataforma}}
+      <strong> Desarrollador:</strong> {{resultado.desarrollador}}
+      <strong> Genero:</strong> {{resultado.genero}}
+      <strong> Lanzamiento:</strong> {{resultado.lanzamiento}}
+      <div style="padding: 10px 0px">
+        <a
+          style="
+            color: white;
+            padding: 1px 15px;
+            background-color: red;
+            opacity: 50%;
+            text-decoration: none;
+            margin-left: 10px;
+            border-radius: 10px;
+          "
+          href="{% url 'eliminarVideojuego' resultado.nombre %}"
+        >
+          <strong> Borrar </strong>
+        </a>
+        <a
+          style="
+            color: white;
+            padding: 1px 15px;
+            background-color: green;
+            opacity: 50%;
+            text-decoration: none;
+            margin-left: 10px;
+            border-radius: 10px;
+          "
+          href="{% url 'editarVideojuego' resultado.nombre %}"
+        >
+          <strong> Editar </strong>
+        </a>
+      </div>
+    </li>
+    {% endfor %}
+    <a href="{% url 'videojuego'%}" style="text-decoration: none">
+      <div
+        style="
+          padding: 10px 20px;
+          background-color: blue;
+          width: 200px;
+          color: white;
+          margin: 10px 5px;
+          border-radius: 20px;
+        "
+      >
+        Agregar Videojuego
+      </div>
+    </a>
+  </ul>
+</div>
+{% endblock %}

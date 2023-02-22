@@ -1,0 +1,168 @@
+{% extends "AppOficina/plantilla.html" %} {% load static %} {% block main %}
+<div>
+  <h1 style= 'width:100%; text-align:center'>Aquí puedes registrar tu contenido</h1>
+  <div class="navBar" style="margin-bottom: 30px">
+    <ul>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'videojuego'%}"
+        >
+          Registrar Videojuegos</a
+        >
+      </li>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'consola'%}"
+        >
+          Registrar Consolas</a
+        >
+      </li>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'desarrollador'%}"
+        >
+          Registrar Desarrolladores</a
+        >
+      </li>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'personaje'%}"
+        >
+          Registrar Personajes</a
+        >
+      </li>
+    </ul>
+  </div>
+  <h1 style= 'width:100%; text-align:center'>Aquí puedes editar tu contenido</h1>
+  <div class="navBar" style="margin-bottom: 30px">
+    <ul>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'leerVideojuegos'%}"
+        >
+          Ver videojuegos</a
+        >
+      </li>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'leerDesarrolladores'%}"
+        >
+          Ver desarrolladores</a
+        >
+      </li>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'leerPersonajes'%}"
+        >
+          Ver personajes</a
+        >
+      </li>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'leerConsolas'%}"
+        >
+          Ver Consolas</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+  <h1 style= 'width:100%; text-align:center'>Aquí puedes buscar tu contenido</h1>
+  <div class="navBar" style="margin-bottom: 30px">
+    <ul>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'buscarVideojuego'%}"
+        >
+          Buscar Videojuegos</a
+        >
+      </li>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'buscarDesarrollador'%}"
+        >
+        Buscar Desarrolladores</a
+        >
+      </li>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'buscarPersonaje'%}"
+        >
+        Buscar Personaje</a
+        >
+      </li>
+      <li>
+        <a
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 30px;
+          "
+          href="{% url 'buscarConsola'%}"
+        >
+        Buscar Consola</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

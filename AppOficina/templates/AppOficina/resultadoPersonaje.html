@@ -1,0 +1,20 @@
+{% extends "AppOficina/plantilla.html" %} {% load static %} {% block main %}
+
+<div>
+  {% if consulta %}
+
+  <h3>Resultados de la búsqueda: {{consulta}}</h3>
+  <ul>
+    {% for resultado in resultados %}
+
+    <li>
+      <h4>{{ resultado.nombre}}</h4>
+      <strong> Videojuego:</strong> {{resultado.videojuego}}
+      <strong> Plataforma:</strong> {{resultado.plataforma}}
+    </li>
+
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endblock %}

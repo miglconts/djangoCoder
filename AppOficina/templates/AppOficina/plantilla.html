@@ -5,11 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="stylesheet"
       href="{% static 'AppOficina/assets/css/style.css' %}"
     />
-    <title>killetter</title>
+    <title>Oficina Gamer</title>
     <meta
       name="description"
       content="Bienvenido a killetter. Estudio méxicano especializado en caligrafía, tipografía y lettering."
@@ -22,7 +23,6 @@
       property="og:description"
       content="Estudio méxicano especializado en caligrafía, tipografía y lettering."
     />
-    <meta property="og:image" content="assets/img/imagen-1.png" />
     <meta property="og:name" content="Killetter Studio" />
     <!-- Favicon -->
     <link
@@ -37,25 +37,52 @@
   <body>
     <header class="barHeader">
       <div class="logo">
-        <a class="logoText" href="{% url 'home'%}">killetter</a>
+        <a class="logoText" href="{% url 'home'%}">Oficina Gamer</a>
       </div>
       <nav class="navBar">
         <ul>
-          <li><a href="{% url 'videojuego'%}"> Videojuegos</a></li>
-          <li><a href="{% url 'consola'%}"> Consolas</a></li>
-          <li><a href="{% url 'desarrollador'%}"> Desarrolladores</a></li>
-          <li><a href="{% url 'personaje'%}"> Personajes</a></li>
-          <li><a href="{% url 'buscarVideojuego'%}"> Buscar Videojuegos</a></li>
+          <li><a href="{% url 'registro'%}">Contenido de Videojuegos</a></li>
+          {% if request.user.is_authenticated %}
+          <li><a href="{% url 'editarUser'%}"> Editar Usuario </a></li>
+          <li><a href="{% url 'logout'%}"> Cerrar Sesión </a></li>
+          <li
+            style="
+              text-decoration: none;
+              font-size: 20px;
+              text-align: center;
+              color: #004a89;
+              display: inline-block;
+              padding: 5px 10px;
+              border-bottom: rgba(0, 73, 137, 0) 1px solid;
+            "
+          >
+            <a href="{% url 'avatar'%}">Hola {{ user.first_name }}</a>
+          </li>
+          {% with user.avatar_set.first as miAvatar %} {% if miAvatar %}
+          <li>
+            <div
+              style="width: 50px; height: 50px; background-image: url('{{miAvatar.image.url}}');
+              background-repeat:no-repeat;
+              background-size:cover;
+              background-position:center center;
+              border-radius:50px"
+            ></div>
+          </li>
+          {% endif %} {% endwith %} {% else %}
+          <li><a href="{% url 'login'%}"> Iniciar Sesión </a></li>
+          <li><a href="{% url 'Signout'%}"> Registrarse </a></li>
+          {% endif %}
         </ul>
       </nav>
     </header>
-    <main class="container">{% block main %} {% endblock %}</main>
+    <main class="container" style="margin-top: 100px; width: 80%">
+      {% block main %} {% endblock %}
+    </main>
 
     <!-- Footer -->
     <footer class="barFooter">
       <div class="logo">
-        <a class="logoTextFoot" href="index.html">killetter</a>
-        <p>Letras desde 2017</p>
+        <a class="logoTextFoot" href="{% url 'about'%}">Sobre mi</a>
       </div>
       <nav class="navBarFooter">
         <a href="https://www.instagram.com/killetter"

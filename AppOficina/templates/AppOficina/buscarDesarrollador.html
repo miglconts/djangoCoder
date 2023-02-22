@@ -1,0 +1,11 @@
+{% extends "AppOficina/plantilla.html" %} {% load static %} {% block main %}
+
+<div>
+  <h4>Buscar desarrolladores por nombre</h4>
+  <form action="/AppOficina/buscarDesarrolladores" method="GET">
+    <input type="text" name="desarrollador" id="desarrollador" />
+    <input type="submit" value="Buscar" />
+  </form>
+</div>
+
+{% endblock %}
