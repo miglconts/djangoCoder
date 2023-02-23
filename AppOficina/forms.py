@@ -4,9 +4,13 @@ from django.contrib.auth.models import User
 from AppOficina.models import Avatar
 
 
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
+
 class FormVidejuego(forms.Form):
     nombre = forms.CharField()
-    lanzamiento = forms.DateField()
+    lanzamiento = forms.DateField(widget=DateInput)
     plataforma = forms.CharField()
     desarrollador = forms.CharField()
     genero = forms.CharField()
@@ -14,13 +18,13 @@ class FormVidejuego(forms.Form):
 
 class FormDesarrollador(forms.Form):
     nombre = forms.CharField()
-    fundada = forms.DateField()
+    fundada = forms.DateField(widget=DateInput)
     pais = forms.CharField()
 
 
 class FormConsola(forms.Form):
     nombre = forms.CharField()
-    lanzamiento = forms.DateField()
+    lanzamiento = forms.DateField(widget=DateInput)
     marca = forms.CharField()
 
 
@@ -51,11 +55,13 @@ class FormEditarUser(UserCreationForm):
 
     class Meta:
         model = User
-        fields = [ 'email', 'first_name', 'last_name',
+        fields = ['email', 'first_name', 'last_name',
                   'password1', 'password2']
         help_texts = {k: "" for k in fields}
+
+
 class FormAvatar(forms.ModelForm):
 
     class Meta:
         model = Avatar
-        fields = [ 'image']
+        fields = ['image']
